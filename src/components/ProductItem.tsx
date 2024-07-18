@@ -1,4 +1,4 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text } from 'react-native';
 
 import Colors from '@/constants/Colors';
 import { Product } from '@/types';
@@ -9,7 +9,7 @@ type ProductItemProps = {
 }
 
 const ProductItem = ({product}: ProductItemProps) => {
-  return <Link href={`/${product.id}`} asChild>
+  return <Link href={`/menu/${product.id}`} asChild>
     <Pressable key={product.id} style={styles.container}>
     <Image source={{uri: product.image}} style={styles.image} resizeMode='contain' />
     <Text style={styles.title}>{product.name}</Text>
